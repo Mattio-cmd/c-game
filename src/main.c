@@ -2,25 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "./funcs.h"
+#include "functions.h"
 
-typedef struct Player {
-  int score;
-  char *name;
-} Player;
-
-typedef struct Inventory {
-  short space[8];
-} Inventory;
-
-
-int main(int agrc, char* argv[]) {
+int main(int agrc, char* argv[])
+{
   Player* player = malloc(sizeof *player);
   player->name = name_create();
-  printf("Hello %s", player->name);
+  printf("Hello %s\n", player->name);
 
   free(player);
 
-  return EXIT_SUCCESS;
+  return 0;
 }
 
