@@ -10,6 +10,11 @@ SUBMITNAME=name.zip
 
 all:$(BIN)
 
+release: CC=clang
+release: CFLAGS=-Wall -O2 -DNDEBUG
+release: clean
+release: $(BIN)
+
 $(BIN): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $@
 
