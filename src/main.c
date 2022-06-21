@@ -10,6 +10,7 @@ int main(int agrc, char* argv[])
   player->name = name_create();
   printf("Hello %s\n", player->name);
 
+
   free(player);
 
   return 0;
